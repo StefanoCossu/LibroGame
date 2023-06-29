@@ -1,0 +1,393 @@
+:root{
+    --dark: rgb(53,53,53);
+    --sec: transparent;
+    --darkMode: rgba(0,0,0,0.7);
+}
+
+body{
+    margin: 0;
+}
+*{
+    color: var(--dark);
+    font-family: 'MedievalSharp', cursive;
+}
+p{
+    font-size: 1.3rem;
+}
+.intestazione{
+    height: 100px;
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#name{
+    border: none;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+.table{
+    background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/tavolo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 0;
+}
+.startDiv{
+    background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scroll-removebg-preview.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+.book{
+    background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/libroaperto-removebg-preview.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px; 
+}
+.stats{
+    background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scroll-removebg-preview.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+}
+.lifeBar{
+    width: 100%;
+    background: linear-gradient(var(--sec),var(--sec)), var(--dark);
+    
+}
+.progress-bar{
+    width: 75%;
+    background: linear-gradient(var(--sec),var(--sec)), red;
+}
+.combat{
+    display: flex;
+    background: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.combatScroll{
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scrollItems-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    min-height: 90px;
+    position: absolute;
+    left: 15%;
+    min-width: 500px;
+}
+.combatReport{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.goldBag{
+    background-image: radial-gradient(circle, var(--sec),var(--sec),var(--sec),transparent,transparent,transparent),url(/resources/img/medieval-coin-pouch.png);
+    border-radius: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    width: 400px;
+    height: 400px;
+    border: none;
+}
+.goldText{
+    text-align: center;
+    display: none;
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scrollItems-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.goldBag:hover .goldText{
+    display: block;
+    bottom: 50%;
+    left: 40%;
+}
+.candle{
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/candle-light.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    width: 200px;
+    height: 200px;
+    border: none;
+}
+.candleOff{
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/Candle_Top_View_Not_Light_Up.png);
+    border-radius: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    width: 200px;
+    height: 200px;
+    border: none;
+}
+.equip{
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scrollItems-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: fit-content;
+}
+.pozioni{
+    background: radial-gradient(circle, var(--sec),var(--sec),var(--sec),transparent), url(/resources/img/turbosquid-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 200px;
+    height: 200px;
+    border: none;
+    padding-bottom: 0;
+}
+.pozioniText{
+    text-align: center;
+    display: none;
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scrollItems-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.pozioni:hover .pozioniText{
+    display: block;
+    bottom: 50%;
+    left: 40%;
+}
+.basil{
+    background: radial-gradient(circle, var(--sec),var(--sec),var(--sec),transparent), url(/resources/img/Genovese-Basil-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 200px;
+    height: 200px;
+    border: none;
+    padding-bottom: 0;
+}
+.fenix{
+    background: linear-gradient(to bottom, transparent, var(--sec),var(--sec), transparent), url(/resources/img/phoenix_down-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 200px;
+    height: 200px;
+    border: none; 
+    padding-bottom: 0;
+}
+.buttonGrid{
+    min-height: 400px;
+}
+.buttons{
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.buttons:hover{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+.buttons2{
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.buttons2:hover{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+.movedown{
+    animation: movedown;  
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.moveup{
+    animation: moveup;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.moveleft{
+    animation: moveleft;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.moveright{
+    animation-name: moveright;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes movedown {
+    0%{
+        transform: translateY(100px);
+    }
+    99%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveup {
+    0%{
+        transform: translateY(-100px);
+    }
+    99%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveright {
+    0%{
+        transform: translateX(50px);
+    }
+    99%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveleft {
+    0%{
+        transform: translateX(-50px);
+    }
+    99%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.modal-content{
+    background: transparent;
+    background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scroll-removebg-preview.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    width: 100%;
+    ;
+}
+.card{
+    background-color: transparent;
+}
+.noSell{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scrollItems-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.aura{
+    box-shadow: 180px 80px 40px 20px gold;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+@media only screen and (max-width: 667px){
+    .storyText{
+        background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scroll-removebg-preview.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 700px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .book{
+        background-image: none;
+        background-color: var(--sec);
+        min-height: 700px; 
+    }
+    .buttonCol{
+        background-image: linear-gradient(var(--sec),var(--sec)), url(/resources/img/scroll-removebg-preview.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 150px;
+        padding-bottom: 100px;
+        min-height: 700px;
+    }
+    .basil{
+        width: 100%;
+        position: relative;
+        left: 90px;        
+    }
+    .fenix{
+        width: 100%;
+        position: relative;
+        left: 90px; 
+    }
+    .equip{
+        background-image: none;
+        background-color: var(--sec);
+        width: fit-content;
+    }
+    .pozioni{
+        position: relative;
+        left: 90px;
+    }
+    .movedown{
+        animation: none;  
+       
+    }
+    .moveup{
+        animation: none;
+        
+    }
+    .moveleft{
+        animation: none;
+      
+    }
+    .moveright{
+        animation-name: none;
+    }
+    .combatScroll{
+        display: none !important;
+    }
+    .combat{
+        background: black;
+        z-index: 2;
+        width: 100%;
+    }
+    .combatReport{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    };
+

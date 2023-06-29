@@ -1,0 +1,914 @@
+[
+    {
+        "id":1,
+        "text":"Ti sei appena svegliato è mattina e il villaggio è in pieno fermento, esci dalla locanda dove alloggi e ti dirigi nel centro cittadino passando in mezzo alla gente, tagliando per un vicolo meno frequentato ti accorgi che qualcuno ti sta inseguendo. Il tuo inseguitore ha il volto coperto da un cappuccio nero e sotto il suo mantello intravedi l'elsa di un'arma.",
+        "options": [
+            {
+                "text":"Ti volti e l'affronti",
+                "nextText":2
+            },
+            {
+                "text":"Cerchi di nasconderti dietro l'angolo più vicino?",
+                "nextText":3
+                
+            }
+        ]
+    },
+    {
+        "id":2,
+        "text":"Lo sconosciuto è visibilmente sorpreso e la tua reazione lo coglie totalmente impreparato, mentre estrae il pugnale il mantello gli si attorciglia sul fodero rallentandolo abbastanza per permetterti di estrarre la tua spada e attaccare per primo!",
+        "combat":true,
+        "enemyPower":110,
+        "enemyWeapon":1,
+        "enemyLife":25,
+        "enemyName":"il misterioso aggressore",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":4
+                
+            }
+        ]
+    },
+    {
+        "id":3,
+        "text":"Lo sconosciuto ti raggiunge rapidamente con la sua arma in mano, purtroppo ci sono pochi nascondigli dove puoi nasconderti.. dovrai combattere!",
+        "combat":true,
+        "enemyPower":120,
+        "enemyWeapon":2,
+        "enemyLife":25,
+        "enemyName":"il misterioso aggressore",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":4    
+            }
+        ]
+    },
+    {
+        "id":4,
+        "text":"La battaglia è stata dura ma alla fine sei riuscito a sopraffare il tuo nemico; oltre il suo pugnale addosso gli trovi 200 monete d'oro e una strana lettera. Sebbene l'intestazione sia macchiata dal sangue e sia illegibile, riesci a leggerne il restante contenuto: 'Cornelius queste sono le 200 monete di anticipo come abbiamo pattuito; se vuoi il resto elimina NAME prima che lo raggiunga il vecchio e scopra la verità!'",
+        "stateChange":[
+            {
+            "gold":200,
+            "weapon":1
+            }
+        ],  
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":5
+                
+            }
+        ]
+
+    },
+    {
+        "id":5,
+        "text":"Prendi tutto e ti allontani, la stanchezza per la battaglia e le ferite si fanno sentire, decidi di rinviare il tuo giro per il villaggio e torni rapidamente alla locanda per riposare..",
+        "options":[
+            {
+                "text":"Vai alla locanda",
+                "nextText":6
+                
+            }
+        ]
+    },
+    {
+        "id":6,
+        "text":"Il riposo ti ha rinfrancato, ti alzi dal letto svegliato dal bussare di qualcuno alla porta, dalla voce riconosci che deve trattarsi dell'oste. Oste: Destatevi viandante, è arrivata una lettera per voi! Apri la porta, giusto il tempo per vedere il pasciuto oste che ti porge con la sua mano unta una lettera con un sigillo rappresentante un falco. Prendi la lettera e chiudi la porta, mentre senti i passi dell'oste che si allontanano..",
+        "healing":100,
+        "options":[
+            {
+                "text":"Leggi la lettera",
+                "nextText":7
+                
+            }
+        ]
+    },
+    {
+        "id":7,
+        "text":"Apri la busta della lettera incuriosito dal suo contenuto e inizi a leggere:'NAME, sebbene non ci conosciamo, spero di trovarti in salute e se ci tieni alla tua vita raggiungimi al più presto a Nord, alla taverna di Nosgorth. Vi attenderò là. In fede Vorador'",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":8
+                
+            }
+        ]
+    },
+    {
+        "id":8,
+        "text":"Non sai ancora cosa stia succedendo, ma dopo quello che è successo nel vicolo decidi di prendere seriamente la lettera. Ormai è metà pomeriggio; sfrutterai queste ultime ore di luce per fare rifornimento al mercato del paese prima di metterti in viaggio domani mattina..",
+        "options":[
+            {
+                "text":"Vai al mercato",
+                "nextText":9
+                
+            }
+        ]
+    },
+    {
+        "id":9,
+        "text":"Al mercato ti procuri le provviste per il viaggio e uno zaino per 10 monete d'oro. Tra i mercanti vi sono anche un fabbro che potrebbe venderti un'armatura o un arma per poter affrontare il viaggio e un alchimista con delle pozioni ristorative..",
+        "stateChange":[
+            {
+            "gold":-10
+            }  
+        ],
+        "seller":[
+            {
+                "itemsName":"Spada",
+                "itemsType":"weapon",
+                "bonus":4,
+                "prezzo":90,
+                "url":"/img/I3288-3R.09-removebg-preview.png",
+                "gold":-90,
+                "weapon":4
+            },
+            {
+                "itemsName":"Cotta di maglia",
+                "itemsType":"armour",
+                "bonus":5,
+                "prezzo":150,
+                "url":"/img/cotta_di_maglia-removebg-preview.png",
+                "gold":-150,
+                "armour":5
+            },
+            {
+                "itemsName":"Pozione di cura",
+                "itemsType":"cura",
+                "bonus":10,
+                "prezzo":40,
+                "url":"/img/turbosquid-removebg-preview.png"
+            }
+        ],
+        "options":[
+            {
+                "text":"Torna alla locanda",
+                "nextText":10
+                
+            }
+        ] 
+    },
+    {
+        "id":10,
+        "text":"Torni alla locanda verso sera. Molti paesani affollano i tavoli e sono rimasti pochi posti liberi. Riesci a scorgerne tre: il primo vicino a un uomo corpulento con dei grandi baffi, il secondo vicino a un giovane col viso affilato ed il terzo vicino ad un anziano con lo sguardo assorto",
+        "options":[
+        {
+            "text":"Siediti vicino all'uomo corpulento",
+            "nextText":11
+            
+        },
+        {
+            "text":"Siediti vicino al giovane col viso affilato",
+            "nextText":12
+            
+        },
+        {
+            "text":"Siediti vicino all'anziano con lo sguardo assorto",
+            "nextText":13
+        }
+    ] 
+    },
+    {
+        "id":11,
+        "text":"L'uomo è piuttosto allegro, mentre ti siedi si asciuga i baffi dalla schiuma della birra e ti lancia un'occhiata.'Piacere mi chiamo Leonard e oggi per me è un gran giorno, non accetto che alla mia tavola si sieda qualcuno sobrio o depresso e dal tuo sguardo, mi sembri entrambe le cose!' Detto ciò mette delle monete sul tavolo e te le porge.'Prenditi qualcosa da bere e brinda alla mia salute o lascia il posto a gente di maggior spirito!'",
+        "stateChange":[
+            {
+            "gold":10
+            }  
+        ],
+        "options":[
+            {
+                "text":"Decidi di prendere le monete e abbandoni il tavolo..",
+                "nextText":14 
+            }
+        ]
+    },
+    {
+        "id":12,
+        "text":"Il giovane col viso affusolato non nota neanche che ti sei seduto è intento a guardare un gruppo di gente seduta dall'altra parte e imprecare sotto voce contro di loro.. da quello che riesci a sentire si sono presi gioco di lui e lui da quello che intendi dev'essere lo sciocco del villaggio. Preferisci non farti vedere vicino a lui",
+        "options":[
+            {
+                "text":"Ti alzi e lasci il tavolo..",
+                "nextText":14 
+            }
+        ]
+    },
+    {
+        "id":13,
+        "text":"L'anziano ha lo sguardo perso nel vuoto ma appena ti siedi lo volge su di te. Si presenta e inizia a raccontarti di un suo viaggio. Gli rispondi che anche tu presto dovrai metterti in cammino e sentendoti dire che andrai a Nord ti porge delle foglie di basilico dicendoti che sono utili contro gli orchi. ",
+        "event":"basilico",
+        "options":[
+            {
+                "text":"Finisci la conversazione, lo ringrazi e lasci il tavolo..",
+                "nextText":14 
+            }
+        ]
+    },
+    {
+        "id":14,
+        "text":"Oramai si è fatto tardi, ti ritiri nelle tue stanze per riposare e prepararti per la partenza di domani.. Ti svegli alle prime luci dell'alba, scendi rapidamente le scale e la locanda a differenza della sera prima è deserta, c'è solo il locandiere che è intento a pulire un calderone e ti da le spalle. Lasci la locanda e ti dirigi a Nord. A metà mattinata senti una voce acuta provenire da un ruscello oltre la vegetazione fuori dal sentiero che stai percorrendo, sei combattutto se indagare o proseguire per la tua strada.",
+        "options":[
+            {
+                "text":"Esci dal sentiero e indaghi",
+                "nextText":15 
+            },
+            {
+                "text":"Continui per la tua strada",
+                "nextText":19
+            }
+        ]
+    },
+    {
+        "id":15,
+        "text":"Ti avvicini al ruscello e scorgi una figura minuta e femminile che sta in mezzo all'acqua. 'Aiutami, ti prego' Non fai in tempo a capire che sta succedendo che un orco compare dalla vegetazione e ti ringhia contro!",
+        "options":[
+            {
+                "text":"Ti ricordi del basilico che ti ha dato l'anziano lo tiri fuori dalle tasche!",
+                "nextText":16, 
+                "requiredState":
+                    {
+                    "basilico":true
+                    }
+                
+            },
+            {
+                "text":"Afferri la tua arma e ti prepari a combattere!",
+                "nextText":17,
+                "requiredState":
+                    {
+                    "basilico":false
+                    }
+                
+            }
+        ]
+    },
+    {
+        "id":16,
+        "text":"Appena estrai le foglie del basilico l'orco assume una smorfia di dolore e inizia a tossire, seppure debilitato si lancia all'attacco, tuttavia così hai ottenuto un bel vantaggio e non puoi fare a meno di ringraziare mentalmente il vecchio incontrato alla locanda!",
+        "combat":true,
+        "enemyPower":135,
+        "enemyWeapon":4,
+        "enemyLife":25,
+        "enemyName":"l'orco",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":18   
+            }
+        ]
+    },
+    {
+        "id":17,
+        "text":"L'orco si avvicina sempre più, sembra che abbia deciso di voler banchettare con le tue carni! Arma in pugno ti prepari a difenderti contro la feroce creatura",
+        "combat":true,
+        "enemyPower":135,
+        "enemyWeapon":4,
+        "enemyLife":50,
+        "enemyName":"l'orco",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":18   
+            }
+        ]
+    },
+    {
+        "id":18,
+        "text":"La bestia giace immobile ai tuoi piedi, ancora col fiatone ti volti verso l'essere femminile che ti ha attirato in quel luogo. Osservandola bene ti rendi conto che sei di fronte a una ninfa di fiume! Strano trovarne qualcuna così vicina alla civiltà.. L'essere ti ringrazia e prima di allontanarsi ti bagna con un getto d'acqua che pulisce le tue ferite e ti consegna un oggetto: la piuma di una Fenice! Ne hai sentito parlare ma non sai bene che poteri abbia!",
+        "event":"fenice",
+        "healing":10,
+        "options":[
+            {
+                "text":"Ritorna al sentiero",
+                "nextText":19   
+            }
+        ]
+    },
+    {
+        "id":19,
+        "text":"Prosegui per il sentiero per il resto della mattinata finchè non raggiungi un ponte. Dall'altra parte del ponte vedi un uomo appoggiato a un carretto che sembre fermo in attesa. Potrebbe essere un bandito che assale gli ignari viandanti che attraversano il ponte o un semplice contadino che è lì per caso..",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":20   
+            }
+        ]
+    },
+    {
+        "id":20,
+        "text":"Pensi rapidamente alle alternative: potresti evitare di attraversare il ponte e continuare a seguire il fiume fino a un punto dove sia possibile guadarlo o trovare un altro ponte oppure abbandoni i tuoi dubbi e attraversi il ponte o cerchi di avvicinarti con un pizzico di fortuna furtivamente all'uomo cercando di capire le sue reali intenzioni ed eventualmente coglierlo di sorpresa?",
+        "options":[
+            {
+                "text":"Eviti il ponte e segui il fiume... TO BE CONTINUED",
+                "nextText":1 
+            },
+            {
+                "text":"Ignori le tue preoccupazioni e attraversi il ponte",
+                "nextText":33   
+            },
+            {
+                "text":"Attraversi il ponte con un approccio furtivo..",
+                "nextText":21,
+                "requiredState":
+                    {
+                    "destrezza":true
+                    }   
+            },
+            {
+                "text":"Attraversi il ponte con un approccio furtivo..",
+                "nextText":22,
+                "requiredState":
+                    {
+                    "destrezza":false
+                    }   
+            }
+        ]
+    },
+    {
+        "id":21,
+        "text":"Sebbene temi che quell'uomo possa essere un brigante, attraversare il ponte è la via più breve. Cerchi di avvicinarti sfruttando la distrazione dell'uomo affidandoti alla tua furtività e possibilmente fortuna.. Muovendoti rapidamente e silenziosamente riesci ad avvicinarti all'uomo senza farti notare!",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":23   
+            }
+        ]
+    },
+    {
+        "id":22,
+        "text":"Sebbene temi che quell'uomo possa essere un brigante, attraversare il ponte è la via più breve. Cerchi di avvicinarti sfruttando la distrazione dell'uomo affidandoti alla tua furtività e possibilmente fortuna.. Ti muovi accucciato il più silenziosamente possibile ma questo ti rallenta parecchio, quando sei a metà del ponte l'uomo si volta e ti vede, urla qualcosa che non capisci e da dietro il carretto spunta un altro uomo armato e consegna un pugnale al primo uomo che solleva il capuccio di cuoio e ti guarda torvo..",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":28   
+            }
+        ]
+    },
+    {
+        "id":23,
+        "text":"Ti avvicini abbastanza all'uomo per vedere che non è armato. Stai per parlargli quando questo si gira e vedendoti non riesce a trattenere un'espressione mista tra sorpresa e spavento. 'Come hai fatto a passare il ponte senza che ti vedessimo? Sei uno spettro o qualcosa di simile? Ti prego non uccidermi, giuro che righerò dritto!' Finito di dire ciò si inginocchia ai tuoi piedi..",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":24   
+            }
+        ]
+    },
+    {
+        "id":24,
+        "text":"Sorpreso dalla sua reazione provi nuovamente a parlare quando da dietro il carro spunta un uomo armato. Inizialmente confuso si rivolge verso di te gridando 'Cosa diavolo sta succedendo? e imprecando sguaina la spada e si lancia contro di te!'",
+        "combat":true,
+        "enemyPower":120,
+        "enemyWeapon":2,
+        "enemyLife":25,
+        "enemyName":"il brigante",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":25   
+            }
+        ]
+    },
+    {
+        "id":25,
+        "text":"Il corpo del tuo avversario giace ai tuoi piedi. Ti volti verso il suo complice ancora rannicchiato e piagnucolante vicino al carro e puntandogli la punta della tua arma gli intimi di darti spiegazioni! L'uomo singhiozzando alza le mani e continua a scongiurarti di non ucciderlo promettendoti di darti tutto l'oro che possiede 'Ti prego, risparmiami! Mi sono unito a lui perchè non avevo altra possibilità ero appena uscito dal bosco dopo essere scappato dalla casa di quella megera maledetta e sarei morto se non mi fossi unito a lui!'",
+        "options":[
+            {
+                "text":"Ascolta la storia..",
+                "nextText":26   
+            }
+        ]
+    },
+    {
+        "id":26,
+        "text":"Il tuo avversario sembra inoffensivo al momento, abbassi l'arma e lo lasci continuare a parlare continuando tuttavia a tenene la spada sfoderata. 'Maledetta megera! Tutta la mia sfortuna inizia a causa sua! Stavo attraversando il bosco quando mi ha invitato a ristorarmi nella sua casa! Mi ha offerto del the caldo, non mi fidavo e ho scambiato le tazze, poi quando l'ho bevuto ho iniziato ad avere la vista offuscata..'",
+        "options":[
+            {
+                "text":"Continua ad ascoltare",
+                "nextText":27   
+            }
+        ]
+    },
+    {
+        "id":27,
+        "text":"'ricordo solo la risata di quella maledetta! Mi sono risvegliato poco distante senza le mie armi e il mio oro! Volevo tornare a vendicarmi ma così disarmato quante possibilità avrei avuto contro una strega?' Credi di aver ascoltato abbastanza lo interrompi e gli dici di andarsene prima che cambi idea.. prendi l'oro che ti consegna, probabilmente il frutto delle loro passate rapine e ti rimetti in cammino..",
+        "event":"info",
+        "stateChange":[
+            {
+            "gold":500
+            }  
+        ],
+        "options":[
+            {
+                "text":"Lascia il ponte e riprendi il tuo cammino",
+                "nextText":38   
+            }
+        ]
+    },
+    {
+        "id":28,
+        "text":"I due si lanciano contro di te, imprecando e urlando! Hai appena il tempo di sfoderare l'arma per difenderti!",
+        "event":"special",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":28               
+            }
+        ]
+    },
+    {
+        "id":29,
+        "text":"Il bandito rimasto arretra e ti chiede una tregua.. Vedere il compagno cadere deve aver smorzato la sua voglia di combattere, ma potrebbe essere solo un trucco per coglierti di sorpresa!",
+        "options":[
+            {
+                "text":"Ti avvicini e lo attacchi",
+                "nextText":30 
+            },
+            {
+                "text":"Abbassi l'arma",
+                "nextText":32 
+            }
+        ]
+    },
+    {
+        "id":30,
+        "text":"Ti avvicini ridendo in faccia al tuo avversario per aver anche solo pensato che tu fossi tanto ingenuo o compassionevole..",
+        "combat":true,
+        "enemyPower":120,
+        "enemyWeapon":2,
+        "enemyLife":17,
+        "enemyName":"il brigante",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":31 
+            }
+           
+        ]
+    },
+    {
+        "id":31,
+        "text":"Anche l'ultimo bandito è caduto sotto la tua spada, ora puoi esaminare i loro cadaveri e vedere se trovi qualcosa di utile. Trovi una borsa con del denaro guadagnato dalle loro razzie e il cappuccio appartenuto al tuo ultimo aggressore! Sicuramente hai reso un servizio alla società eliminando questi due tagliaborse, almeno altri non cadranno nei loro agguati",
+        "stateChange":[
+            {
+            "gold":500,
+            "armour":1
+            }
+        ],
+        "options":[
+            {
+                "text":"Lascia il ponte e riprendi il tuo cammino",
+                "nextText":38 
+            }
+           
+        ]
+    },
+    {
+        "id":32,
+        "text":"Affaticato dal combattimento non sei certo delle intenzioni del tuo avversario ma decidi di credergli e ti fermi. Vedendo il tuo gesto il brigante si getta a terra sulle ginocchia e si rannicchia vicino al carro. Con cautela ti avvicini e lo ascolti mentre ti supplica di risparmiarlo e farfuglia qualcosa piagnucolando..",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":26 
+            }
+        ]
+    },
+    {
+        "id":33,
+        "text":"Decidi di attraversare il ponte ignorando i tuoi sospetti, probabilmente è solo un contadino di passaggio. Mentre attraversi il ponte ti accorgi che l'uomo ti guarda con un sorriso beffardo e dopo aver detto qualcosa che non sei riuscito a sentire si avvicina a te seguito da un uomo uscito da dietro il carro.. ",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":34 
+            }
+        ]
+    },
+    {
+        "id":34,
+        "text":"L'uomo si fa più vicino accompagnato dall'altro che indossa una cintura con una spada e fattosi dare un pugnale da questo si solleva il cappuccio di cuoio e inizia a parlarti a voce alta: 'Salute viandante, non è pericoloso di questi tempi viaggiare da soli? Siete fortunato ad averci incontrato, così potrete attraversare il nostro ponte in tutta sicurezza, per la misera somma di 100 monete d'oro!'",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":35 
+            }
+        ]
+    },
+    {
+        "id":35,
+        "text":"L'uomo continua a guardarti beffardo mentre si passa tra le mani il pugnale affiancato dall'altro che ti guarda truce con la mano sull'elsa della spada. E' evidente che si tratta di due banditi e stanno attendendo la tua risposta..",
+        "options":[
+            {
+                "text":"Rispondi che non hai tanto denaro..",
+                "nextText":36 
+            },
+            {
+                "text":"Cedi al ricatto e paghi la somma",
+                "nextText":37,
+                "requiredState":
+                    {
+                    "gold":100
+                    }    
+            }
+        ]
+    },
+    {
+        "id":36,
+        "text":"Rispondi che anche volendo non disponi di quel denaro, i banditi si guardano fra loro, poi si avvicinano verso di te con le armi sguainate 'Presto scopriremo se dici la verità'",
+        "event":"special",
+        "options":[
+            {
+                "text":"Combatti",
+                "nextText":36
+            }
+        ]
+    },
+    {
+        "id":37,
+        "text":"Paghi i banditi ed eviti un combattimento impari. Ti allontani lasciandoli alle spalle mentre si dividono il denaro e sghignazzano fra di loro..",
+        "stateChange":[
+            {
+            "gold":-100
+            }  
+        ],
+        "options":[
+            {
+                "text":"Riprendi il cammino e ti lasci il ponte alle spalle",
+                "nextText":38 
+            }
+        ]
+    },
+    {
+        "id":38,
+        "text":"Riprendi il tuo cammino e ti lasci il ponte alle spalle. Il sole allo zenit ti indica che è ora di pranzo ti fermi per pranzare a bordo sentiero. Pranzi con il pane e formaggio che avevi comprato al mercato e ti senti decisamente meglio. Ti rimetti lo zaino in spalla e prosegui per il sentiero.",
+        "healing":5,
+        "options":[
+            {
+                "text":"Continua per il sentiero",
+                "nextText":39
+            }
+        ]
+    },
+    {
+        "id":39,
+        "text":"Dopo un paio d'ore di cammino la vegetazione si fa più fitta e ti ritrovi ad attraversare una foresta. Affianco al sentiero noti una caverna. Sembrerebbe deserta, potrebbe essere un buon posto dove riposarsi un attimo..",
+        "options":[
+            {
+                "text":"Entri nella caverna",
+                "nextText":40
+            },
+            {
+                "text":"Prosegui per il sentiero",
+                "nextText":42
+            }
+        ]
+    },
+    {
+        "id":40,
+        "text":"Penetri nella caverna quando nella penombra noti qualcosa muoversi.E' un orso! L'animale si alza sulle zampe e ti ringhia contro! Afferri la tua spada e ti prepari a difenderti!",
+        "combat":true,
+        "enemyPower":135,
+        "enemyWeapon":4,
+        "enemyLife":40,
+        "enemyName":"l'orso",
+        "options":[
+            {
+                "text":"Combatti!",
+                "nextText":41
+            }
+            
+        ]
+    },
+    {
+        "id":41,
+        "text":"L'orso giace per terra con la pelliccia impregnata del suo sangue, esplorando la caverna trovi il cadavere di uno sventurato che prima di te ha avuto la tua stessa idea ma non ebbe la tua fortuna, perquisisci il suo zaino e trovi delle monete e dei guanti. Esci dalla caverna e riprendi il sentiero, non credi sia una buona idea riposare lì..",
+        "stateChange":[
+            {
+            "gold":100,
+            "armour":1
+            }
+        ],
+        "options":[
+            {
+                "text":"Prosegui per il sentiero",
+                "nextText":42
+            }
+            
+        ]
+    },
+    {
+        "id":42,
+        "text":"Ti addentri sempre più nella foresta, a un certo punto t'imbatti in una casetta, rapidamente un'anziana donna esce dalla porta e ti fa segno di avvicinarti ed entrare.",
+        "options":[
+            {
+                "text":"Segui l'anziana dentro la sua dimora",
+                "nextText":43
+            },
+            {
+                "text":"La ignori e prosegui per la tua strada?",
+                "nextText":56
+            }
+            
+            
+        ]
+    },
+    {
+        "id":43,
+        "text":"Segui l'anziana dentro la casa, ti invita a prendere del the caldo per ristorarti dalla fatica. Prepara due tazze di the e le pone su un piccolo tavolo, una davanti a te e l'altra per lei dall'altra parte poi si allontana in un'altra stanza. Nonostante la cortesia della donna la situazione ti sembra sospetta e nutri dei dubbi sulle sue reali intenzioni..",
+        "options":[
+            {
+                "text":"Scambi le tazze di the",
+                "nextText":48,
+                "requiredState":
+                {
+                "info":false
+                }  
+            },
+            {
+                "text":"Non scambi le tazze di the",
+                "nextText":45,
+                "requiredState":
+                {
+                "info":false
+                }  
+            },
+            {
+                "text":"Ti ricordi della storia del bandito..",
+                "nextText":44,
+                "requiredState":
+                {
+                "info":true
+                }    
+            }      
+        ]
+    },
+    {
+        "id":44,
+        "text":"Ti ricordi della storia del brigante sul ponte e di come sia stato ingannato dalla Megera scambiando le tazze di the.. potrebbe essere proprio lei! Nel dubbio decidi quindi di non scambiare le tazze",
+        "options":[
+            {
+                "text":"Lasci le tazze di the come sono",
+                "nextText":45
+            }          
+        ]
+    },
+    {
+        "id":45,
+        "text":"Lasci le tazze di the sul tavolo come le ha disposte l'anziana. La donna beve il suo the e poco dopo strabuzza gli occhi e non riesce a proferire un improperio che rovina a terra. Ti alzi e la osservi incredulo e noti il suo sguardo carico d'odio. Inizia a farfugliare qualcosa e i suoi occhi diventano neri come la pece.",
+        "options":[
+            {
+                "text":"Continua",
+                "nextText":46
+            }          
+        ]
+    },
+    {
+        "id":46,
+        "text":"La vecchia è una strega e sta per lanciarti una maledizione! Prima che possa terminare il rito conficchi la tua spada nel suo cuore, ponendo fine alla sua agonia e alla minaccia! Ancora icredulo su quanto accaduto esamini la dimora della megera",
+        "options":[
+            {
+                "text":"Perlustra la casa",
+                "nextText":47
+            }          
+        ]
+    },
+    {
+        "id":47,
+        "text":"Nella abitazione trovi un sacco di vecchi tomi in una lingua a te incomprensibile e cianfrusaglie varie. Mentre stai per uscire noti una pergamena con sopra delle annotazioni della strega che spiega come attirava gli ignari viaggiatori e abbia modificato i segnali del sentiero per farli perdere nella foresta e un piccolo borsello con 100 monete. ",
+        "event":"witchDeath",
+        "stateChange":[
+            {
+            "gold":100
+            }
+        ],
+        "options":[
+            {
+                "text":"Abbandona la casa e riprendi il sentiero nella foresta",
+                "nextText":56
+            }          
+        ]
+    },
+    {
+        "id":48,
+        "text":"Scambi rapidamente le tazze di the senza farti vedere dalla donna appena un attimo prima che rientri nella stanza e inizi a sorseggiare il suo the. Tranquillizato bevi anche tu il tuo. Inizi a sentire una strana sensazione, la vista ti si offusca e non riesci a muoverti. I tuoi sensi si intorpidiscono e senti la risata della vecchia mentre crolli sul pavimento.. poi buio..",
+        "options":[
+            {
+                "text":"Continua...",
+                "nextText":49
+            }          
+        ]
+    },
+    {
+        "id":49,
+        "text":"Ti risvegli nel bosco non tanto lontano dalla casa della vecchia e ti accorgi di essere stato completamente derubato! Quella vecchia era senz'altro una strega che vive derubando i viandanti nel bosco avvelenandoli contando nella naturale diffidenza verso la sua offerta!",
+        "event":"derubato",
+        "options":[
+            {
+                "text":"Torni indietro per recuperare i tuoi averi",
+                "nextText":50
+            }, 
+            {
+                "text":"Prosegui il cammino con quello che ti è rimasto?",
+                "nextText":56
+            }          
+        ]
+    },
+    {
+        "id":50,
+        "text":"La megera è impegnata a raccogliere qualche erba nel retro della casa, potrebbe essere la tua occasione per intrufolarti indisturbato e recuperare i tuoi oggetti, oppure potresti affrontarla direttamente e obbligarla a restituirti il mal tolto..",
+        "options":[
+            {
+                "text":"Affronti la megera",
+                "nextText":55
+            },
+            {
+                "text":"Tenti di intrufolarti in casa senza farti vedere..",
+                "nextText":51,
+                "requiredState":
+                    {
+                    "destrezza":true
+                    } 
+            },
+            {
+                "text":"Tenti di intrufolarti in casa senza farti vedere..",
+                "nextText":52,
+                "requiredState":
+                    {
+                    "destrezza":false
+                    } 
+            }                
+        ]
+    },
+    {
+        "id":51,
+        "text":"Sei riuscito ad entrare nella casa senza farti scoprire. Trovi una cassa con all'interno gli oggetti che ti sono stati sottratti. Ti sei appena ripreso il tuo equipaggiamento che davanti alla porta spunta la megera, inizialmente sorpresa poi adirata lancia un urlo disumano e si getta contro di te! Finalmente puoi vendicarti, aspettavi questo momento da tanto..",
+        "event":"derubato",
+        "combat":true,
+        "enemyPower":135,
+        "enemyWeapon":4,
+        "enemyLife":40,
+        "enemyName":"la megera",
+        "options":[
+            {
+                "text":"Combatti!",
+                "nextText":53
+            }      
+        ]
+    },
+    {
+        "id":52,
+        "text":"Provi ad avvicinarti il più silenziosamente possibile ma a metà strada schiacci un ramo che spezzandosi fa abbastanza rumore da far girare la megera verso di te. Inizialmente sorpresa poi adirata si lancia contro di te emettendo un urlo disumano! Puoi solo difenderti!",
+        "combat":true,
+        "enemyPower":135,
+        "enemyWeapon":4,
+        "enemyLife":40,
+        "enemyName":"la megera",
+        "options":[
+            {
+                "text":"Combatti!",
+                "nextText":54
+            }          
+        ]
+    },
+    {
+        "id":53,
+        "text":"Il corpo della megera giace ai tuoi piedi disteso a terra sopra la chiazza lasciata dal suo sangue nero. Il suo corpo emana un incredibile fetore frutto certamente della stregoneria da cui questa immonda creatura attingeva il suo potere!",
+        "options":[
+            {
+                "text":"Perlustra la casa",
+                "nextText":47
+            }          
+        ]
+    },
+    {
+        "id":54,
+        "text":"Superi il corpo della megera ed entri nella sua dimora in cerca del tuo equipaggiamento. Appena entri riconosci il tuo zaino e ti riapropri dei tuoi averi, decidi di settacciare la casa in cerca di qualcosa di utile",
+        "event":"derubato",
+        "options":[
+            {
+                "text":"Perlustra la casa",
+                "nextText":47
+            }          
+        ]
+    },
+    {
+        "id":55,
+        "text":"Furente ti lanci contro la vecchia pensando che in fondo vista l'età non possa essere un forte avversario hai percorso metà strada che ti separa da lei, quando voltandosi ti vede ed emette un ululato sovrannaturale..Seppur con la pelle d'oca non ti lasci intimorire e sferri un pugno alla strega che stringe i denti e risponde all'attacco.. Volevi ucciderla ora ne hai la possibilità!",
+        "combat":true,
+        "enemyPower":135,
+        "enemyWeapon":4,
+        "enemyLife":40,
+        "enemyName":"la megera",
+        "options":[
+            {
+                "text":"Combatti!",
+                "nextText":54
+            }          
+        ]
+    },
+    {
+        "id":56,
+        "text":"Il bosco si fa sempre più fitto e percepisci il movimento degli animali selvatici tra le frasche, ti auguri di uscirne prima che faccia buio..",
+        "options":[
+            {
+                "text":"Prendi il sentiero nascosto dalla megera..",
+                "nextText":57,
+                "requiredState":
+                    {
+                    "witchDeath":true
+                    } 
+            },
+            {
+                "text":"Continua nel bosco..",
+                "nextText":58,
+                "requiredState":
+                    {
+                    "witchDeath":false
+                    } 
+            }          
+        ]
+    },
+    {
+        "id":57,
+        "text":"Trovi il sentiero che era segnalato nella pergamena a casa della megera dietro a dei fitti cespugli che la strega aveva posto per nasconderlo e far perdere i viandanti. E' quasi il tramonto quando finalmente arrivi al limitare della foresta e si apre una vasta pianura davanti a te. Decidi di attrezzare un piccolo campo per passare la notte.",
+        "options":[
+            {
+                "text":"Attrezza il campo TO BE CONTINUED",
+                "nextText":1
+            }          
+        ]
+    },
+    {
+        "id":58,
+        "text":"Percorri il sentiero quando a un certo punto si interrompe. Ti fai strada nella vegetazione quando ad un tratto noti una frasca vibrare poco lontano da te. Ti fermi giusto in tempo per vedere un lupo uscirne fuori e ringhiadoti lanciarsi contro di te!",
+        "combat":true,
+        "enemyPower":120,
+        "enemyWeapon":4,
+        "enemyLife":30,
+        "enemyName":"il lupo",
+        "options":[
+            {
+                "text":"Combatti!",
+                "nextText":59
+            }          
+        ]
+    },
+    {
+        "id":59,
+        "text":"Il lupo è ancora agonizzante ai tuoi piedi quando odi ululare in lontananza.. Prima che tutto il branco ti si mostri inizi a correre arma in pugno davanti a te! Alla fine ti fermi per recuperare fiato. Ormai è già tardi ed è quasi il tramonto, decidi di arrampicarti su un albero per passare la notte..",
+        "options":[
+            {
+                "text":"Arrampicati sull'albero",
+                "nextText":60
+            }          
+        ]
+    },
+    {
+        "id":60,
+        "text":"Trovi una grande quercia con un ramo abbastanza robusto da reggere il tuo peso, rapidamente ti arrampichi sull'albero e ti prepari a passare la notte, sebbene non sia esattamente comodo almeno è sicuro!",
+        "options":[
+            {
+                "text":"Passa la notte.. ",
+                "nextText":62,
+                "requiredState":
+                    {
+                    "derubato":true
+                    } 
+            },
+            {
+                "text":"Passa la notte.. ",
+                "nextText":61,
+                "requiredState":
+                    {
+                    "derubato":false
+                    } 
+            }         
+        ]
+    },
+    {
+        "id":61,
+        "text":"Ti risvegli intorpidito e affamato, la notte è passata senza problemi e prima di scendere dall'albero approfitti della calma per consumare una sostanziosa colazione. Con lo stomaco pieno decidi di scendere dall'albero sperando di uscire presto dalla foresta senza ulteriori problemi..",
+        "healing":5,
+        "options":[
+            
+            {
+                "text":"Scendi dall'albero ",
+                "nextText":1
+            }         
+        ]
+    },
+    {
+        "id":62,
+        "text":"Ti risvegli intorpidito e affamato, la notte è passata senza problemi e prima di scendere dall'albero vorresti fare colazione ma tutte le tue scorte erano nello zaino che ti è stato sottratto dalla strega. Il tuo stomaco brontola per la fame e speri di uscire dalla foresta in fretta senza ulteriori problemi..",
+        "healing":-5,
+        "options":[
+            
+            {
+                "text":"Scendi dall'albero ",
+                "nextText":1
+            }         
+        ]
+    }
+]
